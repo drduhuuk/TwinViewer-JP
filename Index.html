@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinViewer by Dr Hu Du</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .iframe-container {
+            flex: 1;
+            position: relative;
+            border: none;
+            margin: 0;
+        }
+        
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 10;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="iframe-container">
+            <div class="label">Before</div>
+            <iframe 
+                src="https://my.matterport.com/show?m=jezt97LxnDQ"
+                frameborder="0"
+                allowfullscreen
+                allow="vr; accelerometer; gyroscope; fullscreen">
+            </iframe>
+        </div>
+        <div class="iframe-container">
+            <div class="label">After</div>
+            <iframe 
+                src="https://my.matterport.com/show?m=oNywEX5Y4Ea"
+                frameborder="0"
+                allowfullscreen
+                allow="vr; accelerometer; gyroscope; fullscreen">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
